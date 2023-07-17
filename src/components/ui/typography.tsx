@@ -9,7 +9,7 @@ interface TypographyProps extends PropsWithChildren{
 
 export function TypographyH1({children,className,font='display',...props}:TypographyProps) {
     return (
-      <h1 className={cn("scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl", className, font==='display' ?'font-display' : 'font-sans')}>
+      <h1 className={cn("scroll-m-20 text-5xl font-extrabold tracking-normal lg:text-5xl", className, font==='display' ?'font-display' : 'font-sans')}>
        {children}
       </h1>
     )
@@ -17,7 +17,7 @@ export function TypographyH1({children,className,font='display',...props}:Typogr
 
   export function TypographyH2({children,className,font='display',...props}:TypographyProps) {
     return (
-      <h2 className={cn("scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0", className, font==='display' ?'font-display' : 'font-sans')}>
+      <h2 className={cn("scroll-m-20 border-b pb-2 text-4xl font-normal tracking-normal transition-colors first:mt-0", className, font==='display' ?'font-display' : 'font-sans')}>
       {children}
       </h2>
     )
@@ -25,7 +25,7 @@ export function TypographyH1({children,className,font='display',...props}:Typogr
   
   export function TypographyH3({children,className,font='display',...props}:TypographyProps) {
     return (
-      <h3 className={cn("scroll-m-20 text-2xl font-semibold tracking-tight",
+      <h3 className={cn("scroll-m-20 text-3xl font-normal tracking-wider",
        className, font==='display' ?'font-display' : 'font-sans')}>
        {children}
       </h3>
@@ -34,7 +34,7 @@ export function TypographyH1({children,className,font='display',...props}:Typogr
   
   export function TypographyH4({children,className,font='display',...props}:TypographyProps) {
     return (
-      <h4 className={cn("scroll-m-20 text-xl font-semibold tracking-tight",className,font==='display'?'font-display':'font-sans')}>
+      <h4 className={cn("scroll-m-20 text-2xl font-semibold tracking-wide",className,font==='display'?'font-display':'font-sans')}>
        {children}
       </h4>
     )
@@ -61,6 +61,12 @@ export function TypographyH1({children,className,font='display',...props}:Typogr
       <p className={cn("text-xl text-muted-foreground",className,font==='display'?'font-display':'font-sans')}>
       {children}
       </p>
+    )
+  }
+
+  export function TypographyHero({children,className,font='display',...props}:TypographyProps) {
+    return (
+      <div className={cn("scroll-m-20 leading-[.75] text-4xl font-extrabold uppercase tracking-tight lg:text-[16rem]",className,font==='display'?'font-display':'font-sans')}>{children}</div>
     )
   }
 
