@@ -11,13 +11,13 @@ import { TypographyH1, TypographyH4 } from "./ui/typography"
 export function SiteFooter() {
 
   return (
-    <footer className="z-40 w-full bg-foreground text-background">
+    <footer className="z-40 w-full bg-primary text-background">
         <div className="container flex flex-col">
       <div className='py-12 flex items-start justify-between space-x-4 transition-colors delay-75 sm:justify-between sm:space-x-0'>
           <Icons.logo className="w-[7.5rem]"/>
       <div className="flex flex-col gap-6">
         <TypographyH4 font="display" className="text-muted-foreground font-normal">
-            ניווט
+            ניווט מהיר
         </TypographyH4>
         <MainNav items={siteConfig.mainNav} direction="vertical" itemClassNames="hover:text-amber-400 hover:underline" />
       </div>

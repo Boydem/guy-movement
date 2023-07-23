@@ -22,8 +22,9 @@ export const siteConfig = {
         },
     ],
     links: {
-        instagram: 'https://twitter.com/shadcn',
-        facebook: 'https://github.com/shadcn/ui',
+        instagram: 'https://www.instagram.com/movement__guy/',
+        facebook: 'https://www.facebook.com/guymovementcoach',
+        whatsapp: 'https://github.com/shadcn/ui',
     },
     footer:{
         sliderText: 'תנועה, חיות, מודעות התפתחותית',
