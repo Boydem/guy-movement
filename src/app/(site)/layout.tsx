@@ -3,6 +3,7 @@ import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site.config"
 import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
   title: {
@@ -30,6 +31,7 @@ export default function SiteLayout({ children }: SiteLayoutProps) {
     <>
       <SiteHeader />
       <div className="flex flex-1 flex-col">{children}</div>
+      <SiteFooter />
     </>
   )
 }

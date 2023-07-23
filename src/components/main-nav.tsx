@@ -2,19 +2,20 @@ import * as React from "react"
 import Link from "next/link"
 
 import { NavItem } from "@/types/nav"
-import { siteConfig } from "@/config/site.config"
 import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
 
 interface MainNavProps {
   items?: NavItem[]
+  direction?: 'horizontal' | 'vertical'
+  itemClassNames?:string
 }
 
-export function MainNav({ items }: MainNavProps) {
+export function MainNav({ items,direction='horizontal', itemClassNames }: MainNavProps) {
   return (
-    <div className="flex gap-6 md:gap-10">
+    <>
       {items?.length ? (
-        <nav className="flex gap-6">
+        <nav className={cn("flex gap-6",
+        direction==='vertical' && 'flex-col')}>
           {items?.map(
             (item, index) =>
               item.href && (
@@ -23,7 +24,7 @@ export function MainNav({ items }: MainNavProps) {
                   href={item.href}
                   className={cn(
                     "flex items-center text-sm font-medium uppercase",
-                    item.disabled && "cursor-not-allowed opacity-80"
+                    item.disabled && "cursor-not-allowed opacity-80",itemClassNames
                   )}
                 >
                   {item.title}
@@ -32,6 +33,6 @@ export function MainNav({ items }: MainNavProps) {
           )}
         </nav>
       ) : null}
-    </div>
+    </>
   )
 }

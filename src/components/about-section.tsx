@@ -7,7 +7,10 @@ const AboutSection: FC = () => {
         <section className='container min-h-[45vh] flex items-center'>
             <TypographyH2 className='max-w-[750px] border-b-0'>
             <Balancer>
-            We are developing and teaching adaptive strategies for an unpredictable, and complex world in which we need to find creative solutions to the challenges we face.
+            הגעתם למסע שלכם.
+המסע שבו קורות תנועות בגוף ובנפש, לא סתם כי אם בתשוקה.
+משימתי המרכזית היא להיות אתכם, ללוות, להדריך ולהעניק כלים.
+מטרתי היא ברורה - לפתח בכם עצמאות גופנית מלאה ובלתי מוגבלת.
             </Balancer>
             </TypographyH2>
         </section>

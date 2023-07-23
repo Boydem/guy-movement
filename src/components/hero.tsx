@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import type { FC } from 'react';
-import MarqueeText from './marque-text';
 import MarqueeSlider from './marquee-slider';
 import { TypographyH3 } from './ui/typography';
+import { Icons } from './icons';
 
 interface HeroSectionProps { }
 
@@ -24,8 +24,11 @@ const HeroSection: FC<HeroSectionProps> = () => {
             <Image src="/SVG/movement-guy-text.svg" alt="logo" fill={true} className="container" />
         </div>
         <div className='absolute bottom-0 left-0 w-full h-16 border-t border-background text-background flex items-center justify-center'>
-        <MarqueeSlider>
+        <MarqueeSlider itemsGap='2rem'>
+            <div className="flex items-center gap-8">
                 <TypographyH3>תנועה מביאה לשינוי</TypographyH3>
+                <Icons.logo className="w-8"/>
+            </div>
         </MarqueeSlider>
         </div>
     </section>
