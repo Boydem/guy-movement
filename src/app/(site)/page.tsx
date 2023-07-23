@@ -1,6 +1,7 @@
 
 import AboutSection from "@/components/about-section"
 import CardsSection from "@/components/cards-section"
+import ContactSection from "@/components/contact-section"
 import HeroSection from "@/components/hero"
 import MentorshipSection from "@/components/mentorship-cta"
 import TestimonialsSection from "@/components/testimonials-section"
@@ -34,7 +35,7 @@ const testimonials = [
     id:'t4',
     image: "/imgs/Olivier-Goetgeluck.jpg",
     name: 'אוליבייה גוטגלאק',
-    title: 'Fighting Monkey מטפל ומורה בקבוצת',
+    title: 'מטפל ומורה בקבוצת Fighting Monkey',
     text: ` Guy has extensive experience in a wide variety of physical and internal practices. He has been a very receptive, and honest fellow researcher throughout the time we’ve been collaborating. Beyond his energy and many hours spent in developing skills, he also has that self-reflective ability that allows him to grow beyond past frames of thinking, behaving and acting in life - which is the fertile soil for his work as an empathic teacher and facilitator to hold a safe and explorative space for a group of individuals. Always a pleasure to work with Guy!    `
   },
   {
@@ -61,6 +62,7 @@ export default function IndexPage() {
     <CardsSection />
     <MentorshipSection />
     <TestimonialsSection testimonials={testimonials}  />
+    <ContactSection />
     </>
   )
 }
