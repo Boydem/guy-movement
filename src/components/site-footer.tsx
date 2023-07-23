@@ -19,14 +19,14 @@ export function SiteFooter() {
         <TypographyH4 font="display" className="text-muted-foreground font-normal">
             ניווט מהיר
         </TypographyH4>
-        <MainNav items={siteConfig.mainNav} direction="vertical" itemClassNames="hover:text-amber-400 hover:underline" />
+        <MainNav items={siteConfig.mainNav} direction="vertical" itemClassNames="hover:text-accent hover:underline" />
       </div>
       </div>
       <div className="w-full flex items-center justify-between">
             <ul className="flex items-center gap-12">
                 {Object.entries(siteConfig.links).map(([key, value]) => (
                     <li key={key}>
-                        <Link className="capitalize hover:text-amber-400 hover:underline" href={value}>
+                        <Link className="capitalize hover:text-accent hover:underline" href={value}>
                             {key}
                         </Link>
                     </li>
@@ -37,7 +37,7 @@ export function SiteFooter() {
         </div>
         <div className="py-12">
         <MarqueeSlider speed={40} itemsGap="5rem" >
-            <TypographyH1 className="text-amber-400 lg:text-[5rem]">
+            <TypographyH1 className="text-accent lg:text-[5rem]">
             {siteConfig.footer.sliderText}
             </TypographyH1>
         </MarqueeSlider>
@@ -49,7 +49,7 @@ export function SiteFooter() {
                     <TypographyH4 className="uppercase font-normal text-muted-foreground">{siteConfig.name} 2023</TypographyH4>
                 </div>
                 <Link href={siteConfig.footer.siteByLink}>
-                    <TypographyH4 className="uppercase font-normal text-muted-foreground hover:text-amber-400 hover:underline">Site By Noam Dahan</TypographyH4>
+                    <TypographyH4 className="uppercase font-normal text-muted-foreground hover:text-accent hover:underline">Site By Noam Dahan</TypographyH4>
                 </Link>
             </div>
         </div>

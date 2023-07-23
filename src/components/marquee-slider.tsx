@@ -1,5 +1,6 @@
 'use client'
 
+import { debounce } from '@/lib/utils';
 import { FC, useRef, useState, useLayoutEffect, useCallback, useMemo, Children } from 'react';
 
 interface MarqueeSliderProps {
@@ -50,12 +51,9 @@ const MarqueeSlider: FC<MarqueeSliderProps> = ({
     const handleResize = () => {
       calculateWidth();
     };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    const debouncedResizeHandler = debounce(handleResize);
+    window.addEventListener('resize', debouncedResizeHandler);
+    return () => window.removeEventListener('resize', debouncedResizeHandler);
   }, [calculateWidth]);
 
   const duration = useMemo(() => {

@@ -15,12 +15,12 @@ const MentorshipSection: FC<MentorshipSectionProps> = () => {
                 מנטורינג
             </TypographyH1>
             <div className='flex flex-col items-start gap-10 max-w-[1000px]'>
-                <Balancer>
-                    <TypographyH1 className='text-background lg:text-[5rem]'>
-                    "אני כאן ללוות אותך בכל צעד במסע שלך, ולהעניק לך את הכלים לקידום אישי ותנועתי"<br/>
-                        מנטורינג עם גיא יחזקאל 
-                    </TypographyH1>
-                </Balancer>
+                <TypographyH1 className='text-background lg:text-[5rem]'>
+                    <Balancer>
+                        "אני כאן ללוות אותך בכל צעד במסע שלך, ולהעניק לך את הכלים לקידום אישי ותנועתי"<br/>
+                            מנטורינג עם גיא יחזקאל 
+                    </Balancer>
+                </TypographyH1>
                 <Button className='rounded-full' size={'lg'}>
                     לפרטים נוספים 
                 </Button>
