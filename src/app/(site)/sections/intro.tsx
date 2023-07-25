@@ -1,9 +1,9 @@
+import AnimationOnScroll from "@/components/animation-on-scroll"
+import { TypographyH2 } from "@/components/ui/typography"
 import type { FC } from "react"
-import { TypographyH1, TypographyH2 } from "./ui/typography"
 import Balancer from "react-wrap-balancer"
-import AnimationOnScroll from "./animation-on-scroll"
 
-const AboutSection: FC = () => {
+const Intro: FC = () => {
   return (
     <section className="container min-h-[45vh] flex items-center">
       <AnimationOnScroll>
@@ -19,4 +19,4 @@ const AboutSection: FC = () => {
   )
 }
 
-export default AboutSection
+export default Intro

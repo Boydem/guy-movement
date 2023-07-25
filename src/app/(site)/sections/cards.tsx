@@ -1,8 +1,12 @@
-import { TypographyH1, TypographyH2, TypographyH4 } from "./ui/typography"
+import {
+  TypographyH1,
+  TypographyH2,
+  TypographyH4,
+} from "../../../components/ui/typography"
 import Balancer from "react-wrap-balancer"
-import { Card, CardContent, CardHeader } from "./ui/card"
+import { Card, CardContent, CardHeader } from "../../../components/ui/card"
 import Image from "next/image"
-import AnimationOnScroll from "./animation-on-scroll"
+import AnimationOnScroll from "../../../components/animation-on-scroll"
 
 const cards = [
   { id: "01", title: "לפגוש את האני האמיתי שלך", img: "/imgs/1.webp" },
@@ -10,7 +14,7 @@ const cards = [
   { id: "03", title: "לגלות ולפתח יכולות חדשות", img: "/imgs/3.webp" },
 ]
 
-const CardsSection = () => {
+const Cards = () => {
   return (
     <section className="min-h-[45vh] py-20 bg-secondary">
       <div className="container flex items-start gap-12 flex-nowrap">
@@ -23,8 +27,9 @@ const CardsSection = () => {
           {cards.map((card, idx) => (
             <AnimationOnScroll
               className="flex-1"
-              classNameNotInView="opacity-0 translate-y-10"
-              delay={idx === 0 ? 100 : idx === 1 ? 200 : 300}
+              variant={"slideUp"}
+              delay={idx === 0 ? 300 : idx === 1 ? 500 : 700}
+              duration={500}
             >
               <Card
                 key={card.id}
@@ -55,4 +60,4 @@ const CardsSection = () => {
   )
 }
 
-export default CardsSection
+export default Cards

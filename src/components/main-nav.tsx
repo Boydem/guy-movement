@@ -6,16 +6,21 @@ import { cn } from "@/lib/utils"
 
 interface MainNavProps {
   items?: NavItem[]
-  direction?: 'horizontal' | 'vertical'
-  itemClassNames?:string
+  direction?: "horizontal" | "vertical"
+  itemClassNames?: string
 }
 
-export function MainNav({ items,direction='horizontal', itemClassNames }: MainNavProps) {
+export function MainNav({
+  items,
+  direction = "horizontal",
+  itemClassNames,
+}: MainNavProps) {
   return (
     <>
       {items?.length ? (
-        <nav className={cn("flex gap-6",
-        direction==='vertical' && 'flex-col')}>
+        <nav
+          className={cn("flex gap-6", direction === "vertical" && "flex-col")}
+        >
           {items?.map(
             (item, index) =>
               item.href && (
@@ -24,7 +29,8 @@ export function MainNav({ items,direction='horizontal', itemClassNames }: MainNa
                   href={item.href}
                   className={cn(
                     "flex items-center text-sm font-medium uppercase",
-                    item.disabled && "cursor-not-allowed opacity-80",itemClassNames
+                    item.disabled && "cursor-not-allowed opacity-80",
+                    itemClassNames
                   )}
                 >
                   {item.title}

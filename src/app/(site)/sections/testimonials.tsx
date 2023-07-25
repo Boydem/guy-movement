@@ -1,24 +1,21 @@
 import type { FC } from "react"
-import { TypographyH1, TypographyH3 } from "./ui/typography"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
-import { TestimonialContent } from "./testimonial-content"
-import AnimationOnScroll from "./animation-on-scroll"
+import { TypographyH1, TypographyH3 } from "../../../components/ui/typography"
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "../../../components/ui/tabs"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "../../../components/ui/avatar"
+import { TestimonialContent } from "../../../components/testimonial-content"
+import AnimationOnScroll from "../../../components/animation-on-scroll"
+import { testimonials } from "@/config/testimonial.config"
 
-export interface Testimonial {
-  id: string
-  image: string
-  name: string
-  title: string
-  text: string
-}
-interface TestimonialsSectionProps {
-  testimonials: Testimonial[]
-}
-
-const TestimonialsSection: FC<TestimonialsSectionProps> = ({
-  testimonials,
-}) => {
+const Testimonials: FC = () => {
   return (
     <section className="w-full bg-secondary py-20">
       <div className="container flex flex-col gap-12">
@@ -77,4 +74,4 @@ const TestimonialsSection: FC<TestimonialsSectionProps> = ({
   )
 }
 
-export default TestimonialsSection
+export default Testimonials
