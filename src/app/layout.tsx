@@ -3,7 +3,6 @@ import { siteConfig } from "@/config/site.config"
 import type { Metadata } from "next"
 import { cn } from "@/lib/utils"
 import { fontDisplay, fontSans } from "@/lib/fonts"
-import Providers from "@/components/providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const metadata: Metadata = {
@@ -39,14 +38,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontDisplay.variable
         )}
       >
-        <Providers>
-          <div className="relative flex min-h-screen flex-col">
-            <div className="flex flex-1 flex-col overflow-hidden">
-              {children}
-            </div>
-          </div>
-          <TailwindIndicator />
-        </Providers>
+        <div className="relative flex min-h-screen flex-col">
+          <div className="flex flex-1 flex-col overflow-hidden">{children}</div>
+        </div>
+        <TailwindIndicator />
       </body>
     </html>
   )
