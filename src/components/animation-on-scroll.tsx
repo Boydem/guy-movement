@@ -32,8 +32,7 @@ export default function AnimationOnScroll({
     classNameInView += " translate-y-0"
     classNameNotInView += " " + variants[variant]
   }
-  console.log("classNameInView:", classNameInView)
-  console.log("classNameNotInView:", classNameNotInView)
+
   return (
     <div
       ref={ref}

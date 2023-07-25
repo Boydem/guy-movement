@@ -9,9 +9,9 @@ import Image from "next/image"
 import AnimationOnScroll from "../../../components/animation-on-scroll"
 
 const cards = [
-  { id: "01", title: "לפגוש את האני האמיתי שלך", img: "/imgs/1.webp" },
-  { id: "02", title: "להבין את טבע ההתפתחות", img: "/imgs/6.webp" },
-  { id: "03", title: "לגלות ולפתח יכולות חדשות", img: "/imgs/3.webp" },
+  { id: "01", title: "לפגוש את האני האמיתי שלך", img: "/imgs/4.webp" },
+  { id: "02", title: "להבין את טבע ההתפתחות", img: "/imgs/20.webp" },
+  { id: "03", title: "לגלות ולפתח יכולות חדשות", img: "/imgs/7.webp" },
 ]
 
 const Cards = () => {

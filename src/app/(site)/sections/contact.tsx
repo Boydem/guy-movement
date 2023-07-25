@@ -40,9 +40,12 @@ const Contact: FC = () => {
     console.log(values)
   }
   return (
-    <section className="w-full py-20 bg-primary-foreground relative z-[0]">
+    <section
+      id="contact-section"
+      className="w-full py-20 bg-primary-foreground relative z-[0]"
+    >
       <Image
-        src={"/imgs/5.webp"}
+        src={"/imgs/15.webp"}
         alt="Movement Guy"
         fill
         className="object-cover object-center grayscale contrast-75 brightness-[0.75] z-[1] pointer-events-none"

@@ -10,7 +10,7 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
     {
       id: "t1",
-      image: "/imgs/1.webp",
+      image: "/imgs/testimonials/eldad.webp",
       name: "אלדד מאייר",
       title: "מתאגרף, קפואריסטה, והיום תלמיד קבוע",
       text: `גיא קיבל אותי (כמו את כל שאר המתאמנים) בזרועות פתוחות וברגע אחד
@@ -23,7 +23,7 @@ export const testimonials: Testimonial[] = [
     },
     {
       id: "t2",
-      image: "/imgs/2.webp",
+      image: "/imgs/testimonials/noa.webp",
       name: "נועה שומוביץ",
       title: "פיזיוטרפיסטית, מורה ליוגה ופילאטיס",
       text: `השיעורים עם גיא הם שילוב של כיף ועבודה עם הגוף. 
@@ -34,23 +34,31 @@ export const testimonials: Testimonial[] = [
     },
     {
       id: "t4",
-      image: "/imgs/Olivier-Goetgeluck.jpg",
+      image: "/imgs/testimonials/Olivier-Goetgeluck.jpg",
       name: "אוליבייה גוטגלאק",
       title: "מטפל ומורה בקבוצת Fighting Monkey",
       text: ` Guy has extensive experience in a wide variety of physical and internal practices. He has been a very receptive, and honest fellow researcher throughout the time we’ve been collaborating. Beyond his energy and many hours spent in developing skills, he also has that self-reflective ability that allows him to grow beyond past frames of thinking, behaving and acting in life - which is the fertile soil for his work as an empathic teacher and facilitator to hold a safe and explorative space for a group of individuals. Always a pleasure to work with Guy!    `,
     },
     {
       id: "t3",
-      image: "/imgs/3.webp",
+      image: "/imgs/testimonials/neil.webp",
       name: "ניל טייסנר",
       title: "מורה לתנועה, ריקוד, ואקרובטיקה",
       text: `Guy participated in a recent workshop in Barcelona, and it was a delight having him in the group. I experienced Guy as an openminded and super friendly, enthusiastic fella. I noticed a bright energy in him and it was clear that he is not only serious but passionate about his practice and what he loves doing.    `,
     },
     {
       id: "t5",
-      image: "/imgs/5.webp",
-      name: "ביבי נתניהו",
+      image: "/imgs/testimonials/ofer.webp",
+      name: "עופר דוידי",
       title: "ראש הממשלה",
-      text: 'לורם איפסום או בקיצור ליפסום הוא מלל מקובל וחסר משמעות המשמש "ממלא מקום" בעת עריכה, בתחום הדפוס, ההדפסה והפרסום. הטקסט משמש כלי לייצוג דפוס שאמור להתווסף למוצר הפרסום בעתיד. מדובר במלל ארוך במיוחד שניתן לבדוק עמו גופנים, וכן התאמת המלל לעמודים המעוצבים ובדיקת סוגי וגודלי גופן והתאמתם למוצר הסופי. ',
+      text: `הכרתי את גיא בקורס מאמנים בוינגייט, ומהר מאוד ראיתי תשוקה גדולה ורצון ללמוד.
+      אחרי שעות וימים של שיחות ארוכות גיא חשף אותי לעולם התנועה שהיה זר לי, ויותר משך אותי עולם פיתוח הגוף.
+      ואחרי זמן מה החלטתי לעבור הדרכה תחתיו, ושם הפכתי למתאמן הראשון של גיא.
+      התחלנו לעבוד יחדיו בינואר 2018, מעל 5 שנים עברו ואנחנו עדיין עובדים יחדיו.
+      מאז עזבתי את עולם חדר הכושר, והחלטתי להקדיש חלק ניכר מחיי לאימונים.
+      כיום אני סטודנט שנה שלישית לפיזיוטרפיה, ולמרות שצברתי ידע רב, גיא תמיד שם להדריך,לחדד במקומות שהתואר לא מספק.
+      גיא הוא לא מורה רגיל, מקצוען, שקדן, לומד כל הזמן, ויודע שתמיד יש לו עוד מה ללמוד.
+      הכושר האישי שלי, ההבנה על הגוף, עלו פלאים.
+      גיא באמת מאמן למופת, מורה, אוזן קשבת וחבר טוב.`,
     },
   ]

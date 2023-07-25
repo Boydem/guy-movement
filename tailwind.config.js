@@ -2,24 +2,24 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
-    fontFamily:{
-        sans:'var(--font-sans)',
-        display:'var(--font-display)',
+    fontFamily: {
+      sans: "var(--font-sans)",
+      display: "var(--font-display)",
     },
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '3rem',
-        xl: '3rem',
-        '2xl': '2rem',
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "3rem",
+        xl: "3rem",
+        "2xl": "3rem",
       },
       screens: {
         "2xl": "1700px",
@@ -75,43 +75,42 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
-        marquee:{
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(calc(-100% - var(--gap)))' },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(calc(-100% - var(--gap)))" },
         },
-        marquee2:{
-          '0%': {transform:'translateX(calc(100% + var(--gap)))'},
-          '100%':{transform:'translateX(0%)'}
-        }
+        marquee2: {
+          "0%": { transform: "translateX(calc(100% + var(--gap)))" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        marquee: 'marquee var(--duration) linear infinite',
-        marquee2: 'marquee2 var(--duration) linear infinite'
+        marquee: "marquee var(--duration) linear infinite",
+        marquee2: "marquee2 var(--duration) linear infinite",
       },
-      
     },
   },
-  safelist:[
-    'delay-0',
-    'delay-75',
-    'delay-100',
-    'delay-150',
-    'delay-200',
-    'delay-300',
-    'delay-500',
-    'delay-700',
-    'delay-1000',
-    'duration-0',
-    'duration-75',
-    'duration-100',
-    'duration-150',
-    'duration-200',
-    'duration-300',
-    'duration-500',
-    'duration-700',
-    'duration-1000',
+  safelist: [
+    "delay-0",
+    "delay-75",
+    "delay-100",
+    "delay-150",
+    "delay-200",
+    "delay-300",
+    "delay-500",
+    "delay-700",
+    "delay-1000",
+    "duration-0",
+    "duration-75",
+    "duration-100",
+    "duration-150",
+    "duration-200",
+    "duration-300",
+    "duration-500",
+    "duration-700",
+    "duration-1000",
   ],
   plugin: [require("tailwindcss-animate")],
 }
