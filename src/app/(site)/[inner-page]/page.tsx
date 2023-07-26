@@ -6,7 +6,7 @@ import AnimationOnScroll from "@/components/animation-on-scroll"
 import {
   TypographyH1,
   TypographyH2,
-  TypographyLarge,
+  TypographyPreLarge,
 } from "@/components/ui/typography"
 import { Balancer } from "react-wrap-balancer"
 import { buttonVariants } from "@/components/ui/button"
@@ -83,8 +83,10 @@ export default function InnerPages({ params }: PageProps) {
           </div>
         </div>
       </section>
-      <section className="max-w-[750px] mx-auto py-20 z-[0] flex items-center justify-center">
-        <TypographyLarge>{currPage.text}</TypographyLarge>
+      <section className="container max-w-[750px] py-20 z-[0]">
+        <TypographyPreLarge className="whitespace-pre-wrap">
+          {currPage.text}
+        </TypographyPreLarge>
       </section>
       <Contact />
     </>

@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { cn } from "@/lib/utils"
 import { fontDisplay, fontSans } from "@/lib/fonts"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: {
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="flex flex-1 flex-col overflow-hidden">{children}</div>
         </div>
         <TailwindIndicator />
+        <Analytics />
       </body>
     </html>
   )

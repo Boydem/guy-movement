@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { TypographyH2 } from "./ui/typography"
+import { Icons } from "./icons"
 
 interface ContactFormProps {}
 
@@ -33,9 +34,17 @@ const ContactForm: FC<ContactFormProps> = () => {
       message: "",
     },
   })
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const { formState } = form
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
+    await fetch("api/email", {
+      method: "POST",
+      body: JSON.stringify(values),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
     console.log(values)
   }
   return (
@@ -96,7 +105,11 @@ const ContactForm: FC<ContactFormProps> = () => {
           type="submit"
           className="rounded-full px-10 h-auto bg-accent transition-all hover:bg-accent hover:brightness-[1.05] text-accent-foreground font-display"
           variant={"secondary"}
+          disabled={formState.isSubmitting}
         >
+          {formState.isSubmitting ? (
+            <Icons.spinner className="ml-2 h-4 w-4 animate-spin" />
+          ) : null}
           <TypographyH2 className="border-none pb-0">שליחה</TypographyH2>
         </Button>
       </form>
