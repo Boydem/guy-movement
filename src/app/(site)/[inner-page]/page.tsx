@@ -6,13 +6,10 @@ import AnimationOnScroll from "@/components/animation-on-scroll"
 import {
   TypographyH1,
   TypographyH2,
-  TypographyH3,
-  TypographyH4,
   TypographyLarge,
-  TypographyP,
 } from "@/components/ui/typography"
 import { Balancer } from "react-wrap-balancer"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import Contact from "../sections/contact"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
