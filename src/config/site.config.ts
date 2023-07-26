@@ -13,7 +13,7 @@ export const siteConfig = {
   links: {
     instagram: "https://www.instagram.com/movement__guy/",
     facebook: "https://www.facebook.com/guymovementcoach",
-    whatsapp: "https://github.com/shadcn/ui",
+    whatsapp: "https://wa.me/972542169595",
   },
   footer: {
     sliderText: "תנועה, חיות, מודעות התפתחותית",
