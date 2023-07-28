@@ -5,7 +5,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "Movement Guy",
   description:
-    "Platform for anyone who wants to schedule appointments with guy.",
+    "גיא יחזקאל מדריך תנועה, מאמן אישי, מעביר סדנאות לכל הגילאים, עוזר למורים שרוצים להרחיב את סל הכלים שלהם, ומפתח תוכניות אימונים וטיפוליות לפי צרכי הלקוח. ועוזר לכל מי שרוצה להכניס תנועה והתפתחות פיזית הדרגתית בהתאמה אישית לאורח חיים בריא יותר ",
   mainNav: innerPagesConfig.pages.map((page) => ({
     title: innerPagesConfig[page].title,
     href: innerPagesConfig[page].href,

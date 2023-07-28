@@ -17,7 +17,7 @@ const Hero: FC<HeroProps> = () => {
         autoPlay
         muted
         loop
-        poster="/imgs/1.webp"
+        poster="https://res.cloudinary.com/dsperrtyj/image/upload/v1690536005/movement-guy/1_tzcdyc.webp"
       >
         <source
           src="https://res.cloudinary.com/dsperrtyj/video/upload/v1674840051/samples/cld-sample-video123.mp4"

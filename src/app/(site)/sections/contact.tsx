@@ -12,7 +12,7 @@ const Contact: FC = () => {
       className="w-full py-20 bg-primary-foreground relative z-[0]"
     >
       <Image
-        src={"/imgs/15.webp"}
+        src={"https://res.cloudinary.com/dsperrtyj/image/upload/v1690536014/movement-guy/15_ymeyo4.webp"}
         alt="Movement Guy"
         fill
         className="object-cover object-center grayscale contrast-75 brightness-[0.75] z-[1] pointer-events-none"

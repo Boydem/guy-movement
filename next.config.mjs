@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: { domains: ["res.cloudinary.com"] },
   env: {
-    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || 'test'
+    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME:
+      process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "test",
   },
-    reactStrictMode: true,
-    experimental: {
-      appDir: true,
-    },
-  }
-  
-  export default nextConfig
+  reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
+}
+
+export default nextConfig

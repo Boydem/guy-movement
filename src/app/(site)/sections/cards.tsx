@@ -9,9 +9,9 @@ import Image from "next/image"
 import AnimationOnScroll from "../../../components/animation-on-scroll"
 
 const cards = [
-  { id: "01", title: "לפגוש את האני האמיתי שלך", img: "/imgs/4.webp" },
-  { id: "02", title: "להבין את טבע ההתפתחות", img: "/imgs/20.webp" },
-  { id: "03", title: "לגלות ולפתח יכולות חדשות", img: "/imgs/7.webp" },
+  { id: "01", title: "לפגוש את האני האמיתי שלך", img: "https://res.cloudinary.com/dsperrtyj/image/upload/v1690536008/movement-guy/2_xgegzu.webp" },
+  { id: "02", title: "להבין את טבע ההתפתחות", img: "https://res.cloudinary.com/dsperrtyj/image/upload/v1690536008/movement-guy/3_i8vpvv.webp" },
+  { id: "03", title: "לגלות ולפתח יכולות חדשות", img: "https://res.cloudinary.com/dsperrtyj/image/upload/v1690536054/movement-guy/23_dpjjnh.webp" },
 ]
 
 const Cards = () => {
@@ -30,11 +30,9 @@ const Cards = () => {
               variant={"slideUp"}
               delay={idx === 0 ? 300 : idx === 1 ? 500 : 700}
               duration={500}
+              key={card.id}
             >
-              <Card
-                key={card.id}
-                className="group relative z-0 rounded-none shadow-sm transition-all"
-              >
+              <Card className="group relative z-0 rounded-none shadow-sm transition-all">
                 <Image
                   src={card.img}
                   fill

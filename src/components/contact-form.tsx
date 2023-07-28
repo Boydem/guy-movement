@@ -16,8 +16,9 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { TypographyH2 } from "./ui/typography"
 import { Icons } from "./icons"
+import { sendContactForm } from "@/services/mail.service"
 
-interface ContactFormProps {}
+export interface ContactFormProps extends z.infer<typeof formSchema> {}
 
 const formSchema = z.object({
   email: z.string().email("אימייל לא תקין"),
@@ -25,8 +26,8 @@ const formSchema = z.object({
   message: z.string().min(2, "הודעה קצרה מדי").max(500, "הודעה ארוכה מדי"),
 })
 
-const ContactForm: FC<ContactFormProps> = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
+const ContactForm: FC = () => {
+  const form = useForm<ContactFormProps>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
@@ -35,16 +36,9 @@ const ContactForm: FC<ContactFormProps> = () => {
     },
   })
   const { formState } = form
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
+  async function onSubmit(values: ContactFormProps) {
     // ✅ This will be type-safe and validated.
-    await fetch("api/email", {
-      method: "POST",
-      body: JSON.stringify(values),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    await sendContactForm(values)
     console.log(values)
   }
   return (

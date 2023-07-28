@@ -14,7 +14,7 @@ import Contact from "../sections/contact"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 
-export const metadata: Metadata = {
+export let metadata: Metadata = {
   title: "About me",
   description: "Home page",
 }
@@ -45,6 +45,12 @@ export default function InnerPages({ params }: PageProps) {
   }
 
   const currPage = innerPagesConfig[innerPageParam]
+
+  // Update the metadata dynamically based on currPage
+  metadata = {
+    title: currPage.title,
+    description: currPage.subtitle,
+  }
 
   return (
     <>

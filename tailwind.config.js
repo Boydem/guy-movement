@@ -1,5 +1,30 @@
+const plugin = require("tailwindcss/plugin")
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  plugins: [
+    plugin(({ addComponents, theme }) => {
+      addComponents({
+        ".container": {
+          marginInline: "auto",
+          paddingInline: theme("spacing.4"),
+          width: "100%",
+          // Breakpoints
+          "@screen xs": {
+            paddingInline: theme("spacing.6"),
+          },
+          "@screen sm": {
+            paddingInline: theme("spacing.12"),
+          },
+          "@screen xl": {
+            maxWidth: "1380px",
+          },
+          "@screen 2xl": {
+            maxWidth: "1700px",
+          },
+        },
+      })
+    }),
+  ],
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -12,18 +37,13 @@ module.exports = {
       sans: "var(--font-sans)",
       display: "var(--font-display)",
     },
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-        lg: "3rem",
-        xl: "3rem",
-        "2xl": "3rem",
-      },
-      screens: {
-        "2xl": "1700px",
-      },
+    screens: {
+      xs: "400px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
     },
     extend: {
       colors: {
@@ -112,5 +132,6 @@ module.exports = {
     "duration-700",
     "duration-1000",
   ],
+  corePlugins: { container: false },
   plugin: [require("tailwindcss-animate")],
 }

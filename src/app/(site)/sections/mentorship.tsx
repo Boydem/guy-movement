@@ -10,7 +10,7 @@ const Mentorship: FC<MentorshipProps> = () => {
   return (
     <section className="w-full bg-primary min-h-[95vh] relative py-20 z-[0] flex">
       <Image
-        src={"/imgs/6.webp"}
+        src={"https://res.cloudinary.com/dsperrtyj/image/upload/v1690536006/movement-guy/6_qe10yq.webp"}
         alt="Movement Guy"
         fill
         className="object-cover object-bottom grayscale brightness-[0.65] contrast-[0.85] z-[1] pointer-events-none"
