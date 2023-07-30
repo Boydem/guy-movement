@@ -9,7 +9,7 @@ import AnimationOnScroll from "./animation-on-scroll"
 
 export function SiteFooter() {
   return (
-    <footer className="z-40 w-full bg-primary text-background">
+    <footer className="z-20 w-full bg-primary text-background">
       <AnimationOnScroll>
         <div className="container flex flex-col">
           <div className="py-12 flex items-start justify-between space-x-4 transition-colors delay-75 sm:justify-between sm:space-x-0">

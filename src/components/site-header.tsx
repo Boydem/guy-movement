@@ -30,13 +30,13 @@ export function SiteHeader() {
     >
       <div
         className={
-          "container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0"
+          "container flex h-16 items-center justify-between"
         }
       >
         <Link href="/" className="flex items-center gap-2">
           <Icons.logo className="w-10" />
         </Link>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center">
           <MainNav items={siteConfig.mainNav} />
         </div>
       </div>

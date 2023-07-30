@@ -1,4 +1,5 @@
 import {
+  Menu,
   AlertTriangle,
   ArrowRight,
   Check,
@@ -43,6 +44,7 @@ export const Icons = {
       </g>
     </svg>
   ),
+  menu: Menu,
   close: X,
   spinner: Loader2,
   chevronLeft: ChevronLeft,
