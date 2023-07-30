@@ -23,14 +23,14 @@ export function MainNav({
 
   return (
     <>
-    <Icons.menu className="cursor-pointer w-10 hidden max-xs:block" onClick={()=>{setIsOpen(true)}}/>
+    <Icons.menu className="cursor-pointer w-10 hidden max-sm:block" onClick={()=>{setIsOpen(true)}}/>
       {items?.length ? (
         <nav
-          className={cn("max-xs:z-10 max-xs:justify-center max-xs:items-center max-xs:translate-x-full max-xs:transition-all max-xs:absolute max-xs:left-0 max-xs:top-0 max-xs:w-full max-xs:h-screen max-xs:bg-background max-xs:text-foreground max-xs:flex-col sm:flex-row flex gap-6"
+          className={cn("max-sm:z-10 max-sm:justify-center max-sm:items-center max-sm:translate-x-full max-sm:transition-all max-sm:absolute max-sm:left-0 max-sm:top-0 max-sm:w-full max-sm:h-screen max-sm:bg-background max-sm:text-foreground max-sm:flex-col sm:flex-row flex gap-6"
           , direction === "vertical" && "flex-col",
-          isOpen && "max-xs:translate-x-0")}
+          isOpen && "max-sm:translate-x-0")}
         >
-          <Icons.close className="cursor-pointer hidden max-xs:block w-10 absolute top-5 left-5" onClick={()=>setIsOpen(false)} />
+          <Icons.close className="cursor-pointer hidden max-sm:block w-10 absolute top-5 left-5" onClick={()=>setIsOpen(false)} />
           {items?.map(
             (item, index) =>
               item.href && (
@@ -38,7 +38,7 @@ export function MainNav({
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center max-xs:text-5xl max-xs:font-display text-sm font-medium uppercase",
+                    "flex items-center max-sm:text-5xl max-sm:font-display text-sm font-medium uppercase",
                     item.disabled && "cursor-not-allowed opacity-80",
                     itemClassNames
                   )}
