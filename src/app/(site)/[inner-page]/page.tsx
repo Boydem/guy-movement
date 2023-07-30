@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { innerPagesConfig, InnerPageKeys } from "@/config/inner-pages.config"
+import { innerPagesConfig, InnerPage } from "@/config/inner-pages.config"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import AnimationOnScroll from "@/components/animation-on-scroll"
@@ -22,30 +22,32 @@ export let metadata: Metadata = {
 interface PageProps {
   params: {
     "inner-page": string
+
   }
 }
 
 export async function generateStaticParams() {
-  const pages = innerPagesConfig.pages
-  return pages.map((page) => ({ page }))
+  const pages = innerPagesConfig
+  return pages.map((page) => ({ 'inner-page':page.id }))
 }
 
-// Custom type guard function to check if the page is a valid InnerPage key
-function isInnerPageKey(page: string): page is InnerPageKeys {
-  if (page === "pages") return false
-  return innerPagesConfig.hasOwnProperty(page)
+export const dynamicParams = false
+
+function getPageById(id: string) : InnerPage | undefined {
+  const page = innerPagesConfig.find(page=>page.id === id)
+  return page || undefined
 }
 
-export default function InnerPages({ params }: PageProps) {
-  const { "inner-page": innerPageParam } = params
+export default function InnerPages({ params }:PageProps) {
+  const { 'inner-page': pageId } = params
+  
+  const currPage: InnerPage | undefined = getPageById(pageId)
 
-  if (!isInnerPageKey(innerPageParam)) {
+  if (!currPage) {
     notFound()
     return null
   }
-
-  const currPage = innerPagesConfig[innerPageParam]
-
+  
   // Update the metadata dynamically based on currPage
   metadata = {
     title: currPage.title,
@@ -75,7 +77,7 @@ export default function InnerPages({ params }: PageProps) {
             </AnimationOnScroll>
             <AnimationOnScroll variant={"slideUp"} delay={200}>
               <Link
-                href={`/${innerPageParam}#contact-section`}
+                href={`/${currPage.id}#contact-section`}
                 className={cn(
                   buttonVariants({ variant: "secondary" }),
                   "rounded-full px-10 h-auto bg-accent transition-all hover:bg-accent hover:brightness-[1.05] text-accent-foreground font-display"
