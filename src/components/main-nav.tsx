@@ -15,7 +15,6 @@ interface MainNavProps {
 
 export function MainNav({
   items,
-  direction = "horizontal",
   itemClassNames,
 }: MainNavProps) {
   const [isOpen,setIsOpen] = useState<boolean>(false)
@@ -27,7 +26,7 @@ export function MainNav({
       {items?.length ? (
         <nav
           className={cn("max-sm:z-10 max-sm:justify-center max-sm:items-center max-sm:translate-x-full max-sm:transition-transform max-sm:absolute max-sm:left-0 max-sm:top-0 max-sm:w-full max-sm:h-screen max-sm:bg-background max-sm:text-foreground max-sm:flex-col sm:flex-row flex gap-6"
-          , direction === "vertical" && "flex-col",
+          ,
           isOpen && "max-sm:translate-x-0")}
         >
           <Icons.close className="cursor-pointer hidden max-sm:block w-10 absolute top-5 left-5" onClick={()=>setIsOpen(false)} />

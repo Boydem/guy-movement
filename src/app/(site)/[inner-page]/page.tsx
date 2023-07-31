@@ -23,32 +23,31 @@ export let metadata: Metadata = {
 interface PageProps {
   params: {
     "inner-page": string
-
   }
 }
 
 export async function generateStaticParams() {
   const pages = innerPagesConfig
-  return pages.map((page) => ({ 'inner-page':page.id }))
+  return pages.map((page) => ({ "inner-page": page.id }))
 }
 
 export const dynamicParams = false
 
-function getPageById(id: string) : InnerPage | undefined {
-  const page = innerPagesConfig.find(page=>page.id === id)
+function getPageById(id: string): InnerPage | undefined {
+  const page = innerPagesConfig.find((page) => page.id === id)
   return page || undefined
 }
 
-export default function InnerPages({ params }:PageProps) {
-  const { 'inner-page': pageId } = params
-  
+export default function InnerPages({ params }: PageProps) {
+  const { "inner-page": pageId } = params
+
   const currPage: InnerPage | undefined = getPageById(pageId)
 
   if (!currPage) {
     notFound()
     return null
   }
-  
+
   // Update the metadata dynamically based on currPage
   metadata = {
     title: currPage.title,

@@ -6,6 +6,7 @@ import { MainNav } from "@/components/main-nav"
 import MarqueeSlider from "./marquee-slider"
 import { TypographyH1, TypographyH4 } from "./ui/typography"
 import AnimationOnScroll from "./animation-on-scroll"
+import { cn } from "@/lib/utils"
 
 export function SiteFooter() {
   return (
@@ -21,11 +22,22 @@ export function SiteFooter() {
               >
                 ניווט מהיר
               </TypographyH4>
-              <MainNav
-                items={siteConfig.mainNav}
-                direction="vertical"
-                itemClassNames="hover:text-accent hover:underline"
-              />
+              <nav className="flex flex-col gap-6">
+                {siteConfig.mainNav.map(
+                  (item, index) =>
+                    item.href && (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className={cn(
+                          "flex items-center text-sm font-medium uppercase hover:text-accent hover:underline"
+                        )}
+                      >
+                        {item.title}
+                      </Link>
+                    )
+                )}
+              </nav>
             </div>
           </div>
           <div className="w-full flex items-center justify-between">
