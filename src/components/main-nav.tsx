@@ -26,7 +26,7 @@ export function MainNav({
     <Icons.menu className="cursor-pointer w-10 hidden max-sm:block" onClick={()=>{setIsOpen(true)}}/>
       {items?.length ? (
         <nav
-          className={cn("max-sm:z-10 max-sm:justify-center max-sm:items-center max-sm:translate-x-full max-sm:transition-all max-sm:absolute max-sm:left-0 max-sm:top-0 max-sm:w-full max-sm:h-screen max-sm:bg-background max-sm:text-foreground max-sm:flex-col sm:flex-row flex gap-6"
+          className={cn("max-sm:z-10 max-sm:justify-center max-sm:items-center max-sm:translate-x-full max-sm:transition-transform max-sm:absolute max-sm:left-0 max-sm:top-0 max-sm:w-full max-sm:h-screen max-sm:bg-background max-sm:text-foreground max-sm:flex-col sm:flex-row flex gap-6"
           , direction === "vertical" && "flex-col",
           isOpen && "max-sm:translate-x-0")}
         >
