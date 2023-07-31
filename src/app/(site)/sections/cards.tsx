@@ -16,36 +16,36 @@ const cards = [
 
 const Cards = () => {
   return (
-    <section className="min-h-[45vh] py-20 bg-secondary">
-      <div className="container flex items-start gap-12 flex-nowrap">
+    <section className="py-20 bg-secondary">
+      <div className="container max-xl:flex-col flex items-start gap-12 flex-nowrap">
         <AnimationOnScroll>
           <TypographyH2 className="border-b-0">
             <Balancer>הזמנה לאורח חיים מלא תנועה</Balancer>
           </TypographyH2>
         </AnimationOnScroll>
-        <div className="flex gap-3 items-center flex-1">
+        <div className="no-scrollbar snap-x flex gap-3 items-stretch flex-1 max-lg:overflow-x-scroll overflow-y-hidden w-full max-w-full min-h-[20rem] scroll-smooth">
           {cards.map((card, idx) => (
             <AnimationOnScroll
-              className="flex-1"
+              className="flex-1 snap-end max-md:translate-y-0"
               variant={"slideUp"}
               delay={idx === 0 ? 300 : idx === 1 ? 500 : 700}
               duration={500}
               key={card.id}
             >
-              <Card className="group relative z-0 rounded-none shadow-sm transition-all">
+              <Card className="group flex flex-col relative z-0 rounded-none shadow-sm transition-all w-[20rem] lg:w-auto h-full">
                 <Image
                   src={card.img}
                   fill
                   alt="guy moves it"
                   className="z-[-1] object-cover grayscale brightness-50 transition-all opacity-0 group-hover:opacity-100"
                 />
-                <CardHeader className="px-10">
+                <CardHeader>
                   <TypographyH4 className="uppercase font-normal text-3xl tracking-normal border-t border-foreground text-secondary-foreground group-hover:text-background group-hover:border-background">
                     {card.title}
                   </TypographyH4>
                 </CardHeader>
-                <CardContent className="px-10">
-                  <TypographyH1 className="[-webkit-text-stroke:_2px_hsl(var(--foreground))] text-background lg:text-[13rem]">
+                <CardContent className="flex-1 flex items-end">
+                  <TypographyH1 className="[-webkit-text-stroke:_2px_hsl(var(--foreground))] text-background max-lg:text-[8rem] lg:text-[13rem]">
                     {card.id}
                   </TypographyH1>
                 </CardContent>
