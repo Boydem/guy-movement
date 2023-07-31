@@ -17,6 +17,6 @@ export const siteConfig = {
   },
   footer: {
     sliderText: "תנועה, חיות, מודעות התפתחותית",
-    siteByLink: "https://shadcn.com",
+    siteByLink: "https://noam-dahan.com",
   },
 }
