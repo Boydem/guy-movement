@@ -173,7 +173,7 @@ export function TypographyPreLarge({
   return (
     <pre
       className={cn(
-        "text-lg font-semibold",
+        "text-md sm:text-lg font-semibold",
         className,
         font === "display" ? "font-display" : "font-sans"
       )}

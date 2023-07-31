@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import { fontDisplay, fontSans } from "@/lib/fonts"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { Analytics } from "@vercel/analytics/react"
+import Providers from "./providers/providers"
 
 export const metadata: Metadata = {
   title: {
@@ -29,18 +30,22 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html dir="rtl" lang="en" suppressHydrationWarning>
+    <html className="scroll-smooth" dir="rtl" lang="en" suppressHydrationWarning>
       <head />
       <body
         suppressHydrationWarning
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased scroll-smooth",
           fontSans.variable,
           fontDisplay.variable
         )}
       >
         <div className="relative flex min-h-screen flex-col">
-          <div className="flex flex-1 flex-col overflow-hidden">{children}</div>
+          <div className="flex flex-1 flex-col overflow-hidden">
+            <Providers>
+            {children}
+            </Providers>
+            </div>
         </div>
         <TailwindIndicator />
         <Analytics />

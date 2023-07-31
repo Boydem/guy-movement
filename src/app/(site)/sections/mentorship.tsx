@@ -3,7 +3,9 @@ import Image from "next/image"
 import { Balancer } from "react-wrap-balancer"
 import AnimationOnScroll from "@/components/animation-on-scroll"
 import { TypographyH1, TypographyH2 } from "@/components/ui/typography"
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
+import Link from "next/link"
+import { cn } from "@/lib/utils"
 interface MentorshipProps {}
 
 const Mentorship: FC<MentorshipProps> = () => {
@@ -37,14 +39,17 @@ const Mentorship: FC<MentorshipProps> = () => {
           </TypographyH1>
           </AnimationOnScroll>
           <AnimationOnScroll variant={"slideUp"} delay={300}>
-            <Button
-              className="rounded-full px-10 h-auto bg-accent transition-all hover:bg-accent hover:brightness-[1.05] text-accent-foreground font-display"
-              variant={"secondary"}
-            >
-              <TypographyH2 className="border-none pb-0">
-                לפרטים נוספים
-              </TypographyH2>
-            </Button>
+          <Link
+                href={`/#contact-section`}
+                className={cn(
+                  buttonVariants({ variant: "secondary" }),
+                  "rounded-full px-10 h-auto bg-accent transition-all hover:bg-accent hover:brightness-[1.05] text-accent-foreground font-display"
+                )}
+              >
+                <TypographyH2 className="border-none pb-0">
+                  לפרטים נוספים
+                </TypographyH2>
+              </Link>
           </AnimationOnScroll>
         </div>
       </div>

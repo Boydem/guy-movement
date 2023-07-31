@@ -30,7 +30,7 @@ export default function SiteLayout({ children }: SiteLayoutProps) {
   return (
     <>
       <SiteHeader />
-      <div className="flex flex-1 flex-col">{children}</div>
+      <div className="flex flex-1 flex-col scroll-smooth">{children}</div>
       <SiteFooter />
     </>
   )

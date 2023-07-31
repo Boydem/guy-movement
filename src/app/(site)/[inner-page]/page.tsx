@@ -6,6 +6,7 @@ import AnimationOnScroll from "@/components/animation-on-scroll"
 import {
   TypographyH1,
   TypographyH2,
+  TypographyP,
   TypographyPreLarge,
 } from "@/components/ui/typography"
 import { Balancer } from "react-wrap-balancer"
@@ -65,11 +66,11 @@ export default function InnerPages({ params }:PageProps) {
         />
         <div className="container z-[2] flex-1 flex flex-col justify-center items-center gap-6">
           <AnimationOnScroll>
-            <TypographyH1 className="text-background text-center lg:text-[5rem]">
+            <TypographyH1 className="text-background text-center text-5xl md:text-[4rem] lg:text-[5rem]">
               {currPage.title}
             </TypographyH1>
           </AnimationOnScroll>
-          <div className="flex flex-col items-center gap-10 max-w-[1000px]">
+          <div className="flex flex-col items-center gap-8 max-w-[1000px]">
             <AnimationOnScroll delay={150}>
               <TypographyH1 className="text-primary opacity-85 mix-blend-difference invert text-center">
                 <Balancer>{currPage.subtitle}</Balancer>
@@ -91,7 +92,7 @@ export default function InnerPages({ params }:PageProps) {
           </div>
         </div>
       </section>
-      <section className="container max-w-[750px] py-20 z-[0]">
+      <section className="container max-w-[750px] py-10 sm:py-20 z-[0]">
         <TypographyPreLarge className="whitespace-pre-wrap">
           {currPage.text}
         </TypographyPreLarge>
