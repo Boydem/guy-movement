@@ -26,7 +26,7 @@ const Cards = () => {
         <div className="no-scrollbar snap-x flex gap-3 items-stretch flex-1 max-lg:overflow-x-scroll overflow-y-hidden w-full max-w-full min-h-[20rem] scroll-smooth">
           {cards.map((card, idx) => (
             <AnimationOnScroll
-              className="flex-1 snap-end max-md:translate-y-0"
+              className="flex-1 snap-end max-md:translate-y-0 max-md:opacity-100"
               variant={"slideUp"}
               delay={idx === 0 ? 300 : idx === 1 ? 500 : 700}
               duration={500}
