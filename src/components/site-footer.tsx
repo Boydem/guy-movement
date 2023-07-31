@@ -48,7 +48,7 @@ export function SiteFooter() {
       <div className="py-12">
         <AnimationOnScroll>
           <MarqueeSlider speed={40} itemsGap="5rem">
-            <TypographyH1 className="text-accent lg:text-[5rem]">
+            <TypographyH1 className="text-accent text-[2.5rem] leading-none md:text-[5rem]">
               {siteConfig.footer.sliderText}
             </TypographyH1>
           </MarqueeSlider>

@@ -37,7 +37,7 @@ const Hero: FC<HeroProps> = () => {
       <div className="absolute bottom-0 left-0 w-full h-16 border-t border-background text-background flex items-center justify-center">
         <MarqueeSlider itemsGap="2rem">
           <div className="flex items-center gap-8">
-            <TypographyH3>תנועה מביאה לשינוי</TypographyH3>
+            <TypographyH3 className="leading-none">תנועה מביאה לשינוי</TypographyH3>
             <Icons.logo className="w-8" />
           </div>
         </MarqueeSlider>

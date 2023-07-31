@@ -45,7 +45,7 @@ const Cards = () => {
                   </TypographyH4>
                 </CardHeader>
                 <CardContent className="flex-1 flex items-end">
-                  <TypographyH1 className="[-webkit-text-stroke:_2px_hsl(var(--foreground))] text-background max-lg:text-[8rem] lg:text-[13rem]">
+                  <TypographyH1 className="[-webkit-text-stroke:_2px_hsl(var(--foreground))] leading-none text-background max-lg:text-[8rem] lg:text-[13rem]">
                     {card.id}
                   </TypographyH1>
                 </CardContent>

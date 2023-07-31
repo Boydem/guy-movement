@@ -23,16 +23,20 @@ const Mentorship: FC<MentorshipProps> = () => {
         </AnimationOnScroll>
         <div className="flex flex-col items-start gap-10 max-w-[1000px]">
           <AnimationOnScroll delay={150}>
-            <TypographyH1 className="text-background lg:text-[5rem]">
+            <TypographyH1 className="text-background text-5xl md:text-[4rem] lg:text-[5rem]">
               <Balancer>
                 "אני כאן ללוות אותך בכל צעד במסע שלך, ולהעניק לך את הכלים לקידום
                 אישי ותנועתי"
-                <br />
-                מנטורינג עם גיא יחזקאל
               </Balancer>
+   
             </TypographyH1>
           </AnimationOnScroll>
-          <AnimationOnScroll variant={"slideUp"} delay={200}>
+          <AnimationOnScroll delay={200}>
+          <TypographyH1 className="text-primary opacity-85 mix-blend-difference invert">
+          מנטורינג עם גיא יחזקאל
+          </TypographyH1>
+          </AnimationOnScroll>
+          <AnimationOnScroll variant={"slideUp"} delay={300}>
             <Button
               className="rounded-full px-10 h-auto bg-accent transition-all hover:bg-accent hover:brightness-[1.05] text-accent-foreground font-display"
               variant={"secondary"}

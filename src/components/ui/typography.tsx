@@ -21,7 +21,7 @@ export function TypographyH1({
   return (
     <h1
       className={cn(
-        "scroll-m-20 text-5xl font-extrabold tracking-normal lg:text-5xl",
+        "scroll-m-20 text-4xl font-extrabold tracking-normal md:text-5xl",
         className,
         font === "display" ? "font-display" : "font-sans"
       )}
@@ -40,7 +40,7 @@ export function TypographyH2({
   return (
     <h2
       className={cn(
-        "scroll-m-20 border-b pb-2 text-4xl font-normal tracking-normal transition-colors first:mt-0",
+        "scroll-m-20 border-b pb-2 text-3xl md:text-4xl font-normal tracking-normal transition-colors first:mt-0",
         className,
         font === "display" ? "font-display" : "font-sans"
       )}
