@@ -211,7 +211,7 @@ export function TypographySmall({
   return (
     <small
       className={cn(
-        "text-sm font-medium leading-none",
+        "text-[1rem] font-medium leading-none",
         className,
         font === "display" ? "font-display" : "font-sans"
       )}

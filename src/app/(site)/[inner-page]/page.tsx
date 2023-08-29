@@ -8,12 +8,14 @@ import {
   TypographyH2,
   TypographyP,
   TypographyPreLarge,
+  TypographySmall,
 } from "@/components/ui/typography"
 import { Balancer } from "react-wrap-balancer"
 import { buttonVariants } from "@/components/ui/button"
 import Contact from "../sections/contact"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
+import SVGGrain from "@/components/svg-grain"
 
 export let metadata: Metadata = {
   title: "About me",
@@ -91,10 +93,26 @@ export default function InnerPages({ params }: PageProps) {
           </div>
         </div>
       </section>
-      <section className="container max-w-[750px] py-10 sm:py-20 z-[0]">
-        <TypographyPreLarge className="whitespace-pre-wrap">
-          {currPage.text}
-        </TypographyPreLarge>
+      <section className="bg-secondary relative py-10 sm:py-20 z-[0] flex items-center justify-center">
+        <Image
+          src="/SVG/paint-brush/1.svg"
+          alt="Movement Guy"
+          width={400}
+          height={400}
+          className="absolute left-20 top-20 object-center grayscale brightness-[0.65] contrast-[0.85] -z-[1] pointer-events-none"
+        />
+        <Image
+          src="/SVG/paint-brush/2.svg"
+          alt="Movement Guy"
+          width={400}
+          height={400}
+          className="absolute right-20 bottom-20 object-center grayscale brightness-[0.65] contrast-[0.85] -z-[1] pointer-events-none"
+        />
+        <div className="container bg-[rgba(255,255,255,0.5)] border border-white backdrop-blur-md rounded-lg p-10 max-w-[750px]">
+          <TypographySmall className="whitespace-pre-wrap ">
+            {currPage.text}
+          </TypographySmall>
+        </div>
       </section>
       <Contact />
     </>
